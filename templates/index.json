@@ -1,0 +1,182 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_EnfktQ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_qaQrJV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stay on track this year with an F1 2025 Calendar",
+            "heading_size": "h1"
+          }
+        },
+        "text_QN9KnV": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "buttons_mXyRkD": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://products/formula-1-2025-calendar",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_qaQrJV",
+        "text_QN9KnV",
+        "buttons_mXyRkD"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/f1_calendar_hero_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_kKMRwh": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/tf_tyre_coasters_4.jpg",
+            "heading": "Formula 1 Tyre Coaster Set + Holder",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://products/formula-1-tyre-coaster-set",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 30,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/f1_calendar_hero_1.jpg",
+            "heading": "Stay on track this year with an F1 2025 Calendar",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://products/formula-1-2025-calendar",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 30,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_kKMRwh",
+        "slide-0"
+      ],
+      "custom_css": [],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "small",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow showing some of TrackForm's Products"
+      }
+    },
+    "featured-collection-0": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "featured-products-collection",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "rich_text_qJ9g33": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zGtJwW": {
+          "type": "heading",
+          "settings": {
+            "heading": "More Products Coming Soon!",
+            "heading_size": "h1"
+          }
+        },
+        "text_MLQXay": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe below to be notified when they are available!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zGtJwW",
+        "text_MLQXay"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "image_banner_EnfktQ",
+    "slideshow",
+    "featured-collection-0",
+    "rich_text_qJ9g33"
+  ]
+}

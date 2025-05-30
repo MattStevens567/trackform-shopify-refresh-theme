@@ -64,14 +64,14 @@
         "slide_kKMRwh": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/tf_tyre_coasters_4.jpg",
+            "image": "shopify://shop_images/tf_tyre_coaster_hero.jpg",
             "heading": "Formula 1 Tyre Coaster Set + Holder",
             "heading_size": "h2",
             "subheading": "",
             "button_label": "Shop Now",
             "link": "shopify://products/formula-1-tyre-coaster-set",
             "button_style_secondary": false,
-            "box_align": "middle-left",
+            "box_align": "middle-right",
             "show_text_box": true,
             "text_alignment": "left",
             "image_overlay_opacity": 30,

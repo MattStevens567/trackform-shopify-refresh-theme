@@ -16,15 +16,16 @@
       "blocks": {
         "announcement_8TpfVT": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
-            "text": "NOTE: Orders currently take up to 3 working days to dispatch!",
+            "text": "NOTE: Orders currently take up to 3 working days to dispatch",
             "link": ""
           }
         },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Free Shipping on Orders over $95!",
+            "text": "Free Shipping on Orders over $69",
             "link": ""
           }
         }
@@ -49,7 +50,7 @@
         "announcement_mpegXR": {
           "type": "announcement",
           "settings": {
-            "text": "Proudly New Zealand Owned & Operated!🇳🇿",
+            "text": "Proudly New Zealand Owned & Operated 🇳🇿",
             "link": ""
           }
         }

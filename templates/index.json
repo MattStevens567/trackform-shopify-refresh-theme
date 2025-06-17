@@ -146,16 +146,16 @@
     "collection_list_wRfPEh": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_G9rT48": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "nz-circuit-3d-wall-art"
+          }
+        },
         "featured_collection_MdhLx8": {
           "type": "featured_collection",
           "settings": {
             "collection": "3d-printed-collection"
-          }
-        },
-        "featured_collection_3Vzjep": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "lego-f1-stands"
           }
         },
         "featured_collection_dVPkM7": {
@@ -164,10 +164,10 @@
             "collection": "silhouette-art"
           }
         },
-        "featured_collection_G9rT48": {
+        "featured_collection_3Vzjep": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "lego-f1-stands"
           }
         },
         "featured_collection_Vyb3kA": {
@@ -178,10 +178,10 @@
         }
       },
       "block_order": [
-        "featured_collection_MdhLx8",
-        "featured_collection_3Vzjep",
-        "featured_collection_dVPkM7",
         "featured_collection_G9rT48",
+        "featured_collection_MdhLx8",
+        "featured_collection_dVPkM7",
+        "featured_collection_3Vzjep",
         "featured_collection_Vyb3kA"
       ],
       "name": "t:sections.collection-list.presets.name",
@@ -189,7 +189,7 @@
         "title": "Collections",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 3,
+        "columns_desktop": 5,
         "color_scheme": "",
         "show_view_all": false,
         "columns_mobile": "1",

@@ -116,6 +116,7 @@
     },
     "featured-collection-0": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -145,16 +146,28 @@
     "collection_list_wRfPEh": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_MdhLx8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "3d-printed-collection"
+          }
+        },
         "featured_collection_3Vzjep": {
           "type": "featured_collection",
           "settings": {
             "collection": "lego-f1-stands"
           }
         },
-        "featured_collection_MdhLx8": {
+        "featured_collection_dVPkM7": {
           "type": "featured_collection",
           "settings": {
-            "collection": "3d-printed-collection"
+            "collection": "silhouette-art"
+          }
+        },
+        "featured_collection_G9rT48": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
           }
         },
         "featured_collection_Vyb3kA": {
@@ -165,8 +178,10 @@
         }
       },
       "block_order": [
-        "featured_collection_3Vzjep",
         "featured_collection_MdhLx8",
+        "featured_collection_3Vzjep",
+        "featured_collection_dVPkM7",
+        "featured_collection_G9rT48",
         "featured_collection_Vyb3kA"
       ],
       "name": "t:sections.collection-list.presets.name",

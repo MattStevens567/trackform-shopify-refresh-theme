@@ -1,6 +1,276 @@
+{% doc %}
+  @prompt
+    Create a global shipping notice that automatically displays on all product pages by fetching data from the 'shipping-notice-lz0cskcd' metaobject. Include the multi-line text message and only show when the boolean field is true
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-shipping-notice-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+    padding: {{ block.settings.padding }}px;
+    margin: {{ block.settings.margin }}px 0;
+    border-radius: {{ block.settings.border_radius }}px;
+    border-left: {{ block.settings.accent_width }}px solid {{ block.settings.accent_color }};
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-shipping-notice__content-{{ ai_gen_id }} {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .ai-shipping-notice__icon-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    color: {{ block.settings.accent_color }};
+    margin-top: 2px;
+  }
+
+  .ai-shipping-notice__text-{{ ai_gen_id }} {
+    flex-grow: 1;
+    font-size: {{ block.settings.font_size }}px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .ai-shipping-notice__text-{{ ai_gen_id }} p {
+    margin: 0 0 8px 0;
+  }
+
+  .ai-shipping-notice__text-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-shipping-notice__close-{{ ai_gen_id }} {
+    background: none;
+    border: none;
+    color: {{ block.settings.text_color }};
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+
+  .ai-shipping-notice__close-{{ ai_gen_id }}:hover {
+    opacity: 1;
+  }
+
+  .ai-shipping-notice__close-{{ ai_gen_id }} svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-shipping-notice-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding | times: 0.8 }}px;
+      margin: {{ block.settings.margin | times: 0.8 }}px 0;
+    }
+
+    .ai-shipping-notice__text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+{% assign shipping_notice = shop.metaobjects['shipping-notice-lz0cskcd'].first %}
+
+{% if shipping_notice and shipping_notice.is_active.value == true %}
+  <shipping-notice-{{ ai_gen_id }}
+    class="ai-shipping-notice-{{ ai_gen_id }}"
+    {{ block.shopify_attributes }}
+    data-notice-id="{{ shipping_notice.id }}"
+  >
+    <div class="ai-shipping-notice__content-{{ ai_gen_id }}">
+      {% if block.settings.show_icon %}
+        <div class="ai-shipping-notice__icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 3h5v5"></path>
+            <path d="M8 3H3v5"></path>
+            <path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"></path>
+            <path d="M21 3l-7.828 7.828A4 4 0 0 0 12 13.657V22"></path>
+          </svg>
+        </div>
+      {% endif %}
+      
+      <div class="ai-shipping-notice__text-{{ ai_gen_id }}">
+        {{ shipping_notice.message.value }}
+      </div>
+
+      {% if block.settings.show_close_button %}
+        <button 
+          class="ai-shipping-notice__close-{{ ai_gen_id }}"
+          aria-label="Close shipping notice"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      {% endif %}
+    </div>
+  </shipping-notice-{{ ai_gen_id }}>
+
+  <script>
+    (function() {
+      class ShippingNotice{{ ai_gen_id }} extends HTMLElement {
+        constructor() {
+          super();
+          this.storageKey = 'shipping-notice-dismissed-' + this.dataset.noticeId;
+        }
+
+        connectedCallback() {
+          if (this.isDismissed()) {
+            this.style.display = 'none';
+            return;
+          }
+
+          this.setupCloseButton();
+        }
+
+        setupCloseButton() {
+          const closeButton = this.querySelector('.ai-shipping-notice__close-{{ ai_gen_id }}');
+          if (closeButton) {
+            closeButton.addEventListener('click', () => {
+              this.dismissNotice();
+            });
+          }
+        }
+
+        dismissNotice() {
+          this.style.display = 'none';
+          localStorage.setItem(this.storageKey, 'true');
+        }
+
+        isDismissed() {
+          return localStorage.getItem(this.storageKey) === 'true';
+        }
+      }
+
+      customElements.define('shipping-notice-{{ ai_gen_id }}', ShippingNotice{{ ai_gen_id }});
+    })();
+  </script>
+{% endif %}
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Global Shipping Notice",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Display Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show shipping icon",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_close_button",
+      "label": "Show close button",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f0f8ff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#2196f3"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "margin",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 16,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "accent_width",
+      "min": 0,
+      "max": 8,
+      "step": 1,
+      "unit": "px",
+      "label": "Accent border width",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Global Shipping Notice"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}

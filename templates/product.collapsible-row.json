@@ -60,7 +60,7 @@
           "settings": {
             "heading": "Description",
             "icon": "none",
-            "content": "<p>{{ product.description }}</p>",
+            "content": "{{ product.description }}",
             "page": ""
           }
         },
@@ -79,16 +79,6 @@
             "heading": "Shipping",
             "icon": "none",
             "content": "{{ metaobjects.shipping_info[\"shipping-info-ilkxfg6z\"].content | metafield_tag }}",
-            "page": ""
-          }
-        },
-        "collapsible_tab_JDJQFn": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Custom Orders",
-            "icon": "none",
-            "content": "",
             "page": ""
           }
         },
@@ -115,7 +105,6 @@
         "collapsible_tab_wgCXpn",
         "collapsible_tab_rjGKna",
         "collapsible_tab_eCjeAy",
-        "collapsible_tab_JDJQFn",
         "description",
         "share"
       ],

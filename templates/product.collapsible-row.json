@@ -35,6 +35,13 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
         "complementary_fHMRCY": {
           "type": "complementary",
           "settings": {
@@ -48,35 +55,38 @@
             "enable_quick_add": true
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": true
-          }
-        },
         "collapsible_tab_wgCXpn": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Description",
             "icon": "none",
-            "content": "",
+            "content": "<p>{{ product.description }}</p>",
             "page": ""
           }
         },
         "collapsible_tab_rjGKna": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Features & Specs",
+            "heading": "Materials & Design",
             "icon": "none",
-            "content": "",
+            "content": "{{ product.metafields.custom.product_info | metafield_tag }}",
             "page": ""
           }
         },
         "collapsible_tab_eCjeAy": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Custom Orders",
+            "heading": "Shipping",
+            "icon": "none",
+            "content": "{{ metaobjects.shipping_info[\"shipping-info-ilkxfg6z\"].content | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_JDJQFn": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Custom Orders",
             "icon": "none",
             "content": "",
             "page": ""
@@ -84,6 +94,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "share": {
@@ -99,11 +110,12 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "complementary_fHMRCY",
         "buy_buttons",
+        "complementary_fHMRCY",
         "collapsible_tab_wgCXpn",
         "collapsible_tab_rjGKna",
         "collapsible_tab_eCjeAy",
+        "collapsible_tab_JDJQFn",
         "description",
         "share"
       ],

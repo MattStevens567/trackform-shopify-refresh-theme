@@ -48,8 +48,36 @@
             "show_gift_card_recipient": true
           }
         },
+        "collapsible_tab_gB8wFi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Description",
+            "icon": "none",
+            "content": "<p>{{ product.description }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_KUNGyQ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials & Design",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.product_info | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_hrT9FX": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping",
+            "icon": "none",
+            "content": "{{ metaobjects.shipping_info[\"shipping-info-ilkxfg6z\"].content | metafield_tag }}",
+            "page": ""
+          }
+        },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "share": {
@@ -67,6 +95,9 @@
         "custom_liquid_qEnDPD",
         "quantity_selector",
         "buy_buttons",
+        "collapsible_tab_gB8wFi",
+        "collapsible_tab_KUNGyQ",
+        "collapsible_tab_hrT9FX",
         "description",
         "share"
       ],

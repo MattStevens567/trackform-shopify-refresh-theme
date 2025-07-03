@@ -75,6 +75,15 @@
             "page": ""
           }
         },
+        "collapsible_tab_kXqnCH": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Bundle Discounts",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -98,6 +107,7 @@
         "collapsible_tab_gB8wFi",
         "collapsible_tab_KUNGyQ",
         "collapsible_tab_hrT9FX",
+        "collapsible_tab_kXqnCH",
         "description",
         "share"
       ],

@@ -61,6 +61,24 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
+        "slide_bGBWdA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/tf_keychains_hero_2.jpg",
+            "heading": "Custom F1 Initials Keychains",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://products/custom-driver-tag-keychain",
+            "button_style_secondary": false,
+            "box_align": "bottom-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 30,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_kKMRwh": {
           "type": "slide",
           "settings": {
@@ -99,6 +117,7 @@
         }
       },
       "block_order": [
+        "slide_bGBWdA",
         "slide_kKMRwh",
         "slide-0"
       ],

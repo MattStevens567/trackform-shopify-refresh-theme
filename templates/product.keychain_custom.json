@@ -80,7 +80,7 @@
           "settings": {
             "heading": "Bundle Discounts",
             "icon": "none",
-            "content": "",
+            "content": "{{ product.metafields.custom.bundle_info | metafield_tag }}",
             "page": ""
           }
         },

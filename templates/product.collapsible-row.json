@@ -35,14 +35,6 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "inventory_LgbfFW": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "body",
-            "inventory_threshold": 20,
-            "show_inventory_quantity": false
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -118,7 +110,6 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "inventory_LgbfFW",
         "buy_buttons",
         "complementary_fHMRCY",
         "collapsible_tab_wgCXpn",

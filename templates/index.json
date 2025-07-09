@@ -61,6 +61,24 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
+        "slide_AkTDiT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/f1_calendar_2026_hero_sqaure.png",
+            "heading": "Formula 1 2026 Calendar",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://products/formula-1-2026-calendar",
+            "button_style_secondary": false,
+            "box_align": "top-left",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_bGBWdA": {
           "type": "slide",
           "settings": {
@@ -117,6 +135,7 @@
         }
       },
       "block_order": [
+        "slide_AkTDiT",
         "slide_bGBWdA",
         "slide_kKMRwh",
         "slide-0"
@@ -135,7 +154,6 @@
     },
     "featured-collection-0": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -143,8 +161,8 @@
         "show_description": false,
         "description_style": "body",
         "collection": "featured-products-collection",
-        "products_to_show": 25,
-        "columns_desktop": 6,
+        "products_to_show": 4,
+        "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
